@@ -1,6 +1,6 @@
 {
   "name": "@juliendu11/instagram-downloader",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Download Instagram media (video / photo)",
   "main": "index.js",
   "scripts": {
