@@ -20,6 +20,15 @@ const instagram_download = require ('@juliendu11/instagram-downloader')
 instagram_download.downloadMedia('[MEDIA]', '[PATH_TO_SAVE]')
 ````
 
+Example:
+
+
+````javascript
+const instagram_download = require ('@juliendu11/instagram-downloader')
+
+instagram_download.downloadMedia('https://www.instagram.com/p/B_SgH6MHc2s/', './images')
+````
+
 ## Dependencies
 
 - [axios](https://www.npmjs.com/package/axios)
