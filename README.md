@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/juliendu11/Instagram-Downloader.svg?branch=master)](https://travis-ci.org/juliendu11/Instagram-Downloader)
+
 # Node JS Instagram downloader
 
 Download Instagram images and videos (not api required)
