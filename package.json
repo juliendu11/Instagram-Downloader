@@ -1,0 +1,33 @@
+{
+  "name": "instagram-downloader",
+  "version": "0.1.0",
+  "description": "Download Instagram media (video / photo)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliendu11/Instagram-Downloader.git"
+  },
+  "keywords": [
+    "Instagram",
+    "Downloader",
+    "Instagram",
+    "Instagram",
+    "media",
+    "downloader"
+  ],
+  "author": "juliendu11 <ares11@outlook.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juliendu11/Instagram-Downloader/issues"
+  },
+  "homepage": "https://github.com/juliendu11/Instagram-Downloader#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
+  "devDependencies": {
+    "jest": "^25.4.0"
+  }
+}
