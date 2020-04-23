@@ -65,23 +65,45 @@ async function download(url, filename, savePath) {
       })
 }
 
+/**
+ * @typedef {Object} DownlodResult
+ * @property {string} file - Main file path
+ * @property {string} type - The type of media, video or image
+ * @property {string} thumbnail - Thumbnail path if video
+ */
+
 
 /**
  * Download media with axios
  * @param {string} url media url
  * @param {string} savePath path to save media downloaded
+ * @returns {DownlodResult} 
  */
 async function downloadMedia(url, savePath) {
   const newUrl = createNewUrl(url);
   const getMetaData = await downloadMetaData(newUrl);
   const getType = getMediaType(getMetaData);
 
+  const result = {
+    file: '',
+    type: '',
+    thumbnail: ''
+  }
+
   if (getType == "image") {
     await download(getMetaData.shortcode_media.display_url, `${getMetaData.shortcode_media.shortcode}.jpg`,savePath);
+    result.file = Path.resolve(savePath, `${getMetaData.shortcode_media.shortcode}.jpg`)
+    result.type = 'Image'
   } else {
     await download(getMetaData.shortcode_media.video_url,`${getMetaData.shortcode_media.shortcode}.mp4`,savePath);
     await download(getMetaData.shortcode_media.thumbnail_src,`${getMetaData.shortcode_media.shortcode}-thumb.jpg`,savePath);
+
+    result.file = Path.resolve(savePath, `${getMetaData.shortcode_media.shortcode}.mp4`)
+    result.thumbnail = Path.resolve(savePath, `${getMetaData.shortcode_media.shortcode}-thumb.jpg`)
+    result.type = 'Video'
   }
+
+  return result
 }
 
 module.exports = {

@@ -17,18 +17,25 @@ npm i @juliendu11/instagram-downloader
 # How to use ?
 
 ````javascript
-const instagram_download = require ('@juliendu11/instagram-downloader')
+const instagram_download = require ('@juliendu11/instagram-downloader');
 
-instagram_download.downloadMedia('[MEDIA]', '[PATH_TO_SAVE]')
+(async () => {
+const value = await instagram_download.downloadMedia('[MEDIA]', '[PATH_TO_SAVE]')
+console.log(value)
+})();
+
 ````
 
 Example:
 
 
 ````javascript
-const instagram_download = require ('@juliendu11/instagram-downloader')
+const instagram_download = require ('@juliendu11/instagram-downloader');
 
-instagram_download.downloadMedia('https://www.instagram.com/p/B_SgH6MHc2s/', './images')
+(async () => {
+const value = await instagram_download.downloadMedia('https://www.instagram.com/p/B_SgH6MHc2s/', './')
+console.log(value)
+})();
 ````
 
 ## Dependencies
